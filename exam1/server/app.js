@@ -25,7 +25,6 @@ app.get("/boards/:bno", async (request, res) => {
 });
 
 //등록 : REST API 기준
-
 app.post("/boards", async (req, res) => {
   let data = req.body.param; // data : 객체타입으로 set 절에 명확하게 정의하지 않았던 값들을 담아서 전달.
   res.send(await db.connection("boardInsert", data));
